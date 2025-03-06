@@ -1,7 +1,6 @@
 # Release
 
 Final version of the project that works directly with the MLX90640 on a Raspberry Pi.
-The code includes a firebase database connection but it is disabled by default because a token is required.
 
 ## Usage
 
@@ -10,10 +9,7 @@ Simply run `start.sh`
 
 ### Manual
 
-run this line to enter the virtual environment (required for dependencies)
-
-`source venv/bin/activate`
-
+The code must be run on a Raspberry Pi with the MLX90640 connected and all the necessary libraries installed.
 
 You need to compile `main.c` and then run the python script `main.py`.
 

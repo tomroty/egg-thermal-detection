@@ -4,8 +4,10 @@ if [ ! -f "./detection" ]; then
     gcc *.c -o detection
 fi
 
-# Activate the Python virtual environment
-source venv/bin/activate
+
+# uncomment and edit the following lines if you are using a virtual environment
+# VENV_PATH="/absolute/path/to/venv"
+# source "$VENV_PATH/bin/activate"
 
 # Run the Python script
 python3 main.py

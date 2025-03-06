@@ -4,19 +4,6 @@ import board
 import busio
 import adafruit_mlx90640
 from datetime import datetime
-#import firebase_admin
-#from firebase_admin import credentials
-#from firebase_admin import firestore
-#from sendnotif import sendNotification
-
-'''
-def Adddata(Number) :
-    cred = credentials.Certificate('./credentials.json')
-    app = firebase_admin.initialize_app(cred)
-    db = firestore.client()
-    doc_ref = db.collection("Egg").document("Actually")
-    doc_ref.set({"nombre" : Number})
-'''
 
 #Get data from thermal camera and write them in a file
 def write_input():
@@ -63,20 +50,6 @@ def main():
     sys.stdout.write(output)
     output = int(output)
 
-    '''
-    if (output):
-        
-        if output == 1:
-            body='Hey, you got an egg ! 🥚'
-        else:
-            body='Hey, you got ' + str(output) + ' eggs ! 🥚'
-        
-        response = sendNotification(
-        token='ExponentPushToken[token]', #put token here
-        title='MyChicken',
-        body=body)
-    Adddata(output)
-    '''
     if (output)>1:
         print(f"{output} eggs detected")
     else:
